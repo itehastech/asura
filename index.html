@@ -14,7 +14,7 @@
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
           <div id="unity-progress-bar-full"></div>
-        </div>x
+        </div>
       </div>
       <!-- <div id="unity-warning"> </div>
       <div id="unity-footer">
@@ -57,13 +57,15 @@
       }
 
       function MuteAudio() {
-        // Call the C# function using Unity API
         unityInstance.SendMessage('GameManager', 'OnMuteButtonClicked');
       }
 
       function UnmuteAudio() {
-        // Call the C# function using Unity API
         unityInstance.SendMessage('GameManager', 'OnUnmuteButtonClicked');
+      }
+
+      function OnRestartButtonClicked() {
+        console.log("RESTART BUTTON PRESSED");
       }
 
       var buildUrl = "Build";
